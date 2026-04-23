@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <script>
+        function somar() {
+            const number1 = parseFloat(document.getElementById("num1").value);
+            const number2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + (number1 + number2);
+        }
+        function subtrair() {
+            const number1 = parseFloat(document.getElementById("num1").value);
+            const number2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + (number1 - number2);
+        }
+        function dividir() {
+            const number1 = parseFloat(document.getElementById("num1").value);
+            const number2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + (number1 / number2);
+        }
+        function multiplicar() {
+            const number1 = parseFloat(document.getElementById("num1").value);
+            const number2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + (number1 * number2);
+        }
+    </script>
+</head>
+
+<body>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="dividir()">/</button>
+    <button onclick="multiplicar()">x</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
