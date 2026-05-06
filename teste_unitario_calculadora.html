@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <script>
+        function somar(a, b) {
+            const number1 = (a !== undefined)
+                ? a
+                : parseFloat(document.getElementById("num1").value);
+
+            const number2 = (b !== undefined)
+                ? b
+                : parseFloat(document.getElementById("num2").value);
+
+            const resultado = number1 + number2;
+
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + resultado;
+            return resultado;
+        }
+        function subtrair(a, b) {
+            const number1 = (a !== undefined)
+                ? a
+                : parseFloat(document.getElementById("num1").value);
+
+            const number2 = (b !== undefined)
+                ? b
+                : parseFloat(document.getElementById("num2").value);
+
+            const resultado = number1 - number2;
+
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + resultado;
+            return resultado;
+        }
+        function multiplicar(a, b) {
+            const number1 = (a !== undefined)
+                ? a
+                : parseFloat(document.getElementById("num1").value);
+
+            const number2 = (b !== undefined)
+                ? b
+                : parseFloat(document.getElementById("num2").value);
+
+            const resultado = number1 * number2;
+
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + resultado;
+            return resultado;
+        }
+        function dividir(a, b) {
+            const number1 = (a !== undefined)
+                ? a
+                : parseFloat(document.getElementById("num1").value);
+
+            const number2 = (b !== undefined)
+                ? b
+                : parseFloat(document.getElementById("num2").value);
+
+            const resultado = number1 / number2;
+
+            document.getElementById("resultado").innerHTML =
+                "Resultado: " + resultado;
+            return resultado;
+        }
+        function testar() {
+            let resultadoTestes = "";
+
+            resultadoTestes += "Teste soma: " +
+                (somar(2, 3) === 5 ? "OK" : "ERRO") + "<br>";
+
+            resultadoTestes += "Teste subtração: " +
+                (subtrair(5, 3) === 2 ? "OK" : "ERRO") + "<br>";
+
+            resultadoTestes += "Teste multiplicação: " +
+                (multiplicar(4, 3) === 12 ? "OK" : "ERRO") + "<br>";
+
+            resultadoTestes += "Teste divisão: " +
+                (dividir(10, 2) === 5 ? "OK" : "ERRO") + "<br>";
+            document.getElementById("resultado").innerHTML = resultadoTestes;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculadora Básica</h1>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="dividir()">/</button>
+    <button onclick="multiplicar()">x</button>
+    <button onclick="testar()">Testar Calculadora</button>
+    <div id="resultado"></div>
+</body>
+
+</html>

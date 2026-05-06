@@ -27,6 +27,22 @@
             document.getElementById("resultado").innerHTML =
                 "Resultado: " + (number1 * number2);
         }
+        function testarcomponente() {
+
+            let resultadoTeste = "";
+
+            document.getElementById("num1").value = 8;
+            document.getElementById("num2").value = 2;
+
+            document.querySelector("button").click();
+
+            if (document.getElementById("resultado").innerHTML === "Resultado: 10") {
+                resultadoTeste = "Teste de componente: OK";
+            } else {
+                resultadoTeste = "Teste de componente: FALHOU";
+            }
+            document.getElementById("testes").innerHTML = resultadoTeste;
+        }
     </script>
 </head>
 
@@ -38,6 +54,8 @@
     <button onclick="subtrair()">-</button>
     <button onclick="dividir()">/</button>
     <button onclick="multiplicar()">x</button>
+    <button onclick="testarcomponente()">Executar Teste</button>
+    <div id="testes"></div>
     <div id="resultado"></div>
 </body>
 
